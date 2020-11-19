@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-import Util.PriceUpdate;
 import entities.Product;
 
 public class Program {
@@ -20,7 +19,7 @@ public class Program {
 		list.add(new Product("Tablet", 350.50));
 		list.add(new Product("HD Case", 80.90));
 		
-		list.forEach(new PriceUpdate());
+		list.forEach(Product::staticPriceUpdate);
 		list.forEach(System.out::println);
 	}
 
